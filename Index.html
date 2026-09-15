@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile-friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google/search-engine information -->
+    <title>Caleb Kimtai | Personal Website</title>
+    <meta name="description"
+          content="Welcome to the personal website of Caleb Kimtai. Learn more about Caleb, his projects, interests and work.">
+
+    <meta name="keywords"
+          content="Caleb Kimtai, Caleb Kimtai Kenya, personal website, teacher trainee, technology, football">
+
+    <meta name="author" content="Caleb Kimtai">
+
+    <!-- Social media preview -->
+    <meta property="og:title" content="Caleb Kimtai | Personal Website">
+    <meta property="og:description"
+          content="Welcome to Caleb Kimtai's personal website.">
+    <meta property="og:type" content="website">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        /* Navigation */
+        nav {
+            background: #111827;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #111827, #2563eb);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: #1d4ed8;
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #111827;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #1d4ed8;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Phone screens */
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Caleb Kimtai</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+
+            <h1>Hi, I'm Caleb Kimtai</h1>
+
+            <h2>Welcome to my website</h2>
+
+            <p>
+                I'm a teacher trainee and technology enthusiast
+                interested in learning, digital technology, football
+                and creating useful projects.
+            </p>
+
+            <a href="#about" class="button">About Me</a>
+
+            <a href="#contact" class="button">Contact Me</a>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                Welcome to my personal website.
+                My name is <strong>Caleb Kimtai</strong>.
+            </p>
+
+            <br>
+
+            <p>
+                I am interested in education, technology,
+                football and learning new digital skills.
+                This website is a place where I can share
+                information about myself, my interests and
+                the projects I work on.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>🌐 My Website</h3>
+                <p>
+                    A personal website created using HTML
+                    and CSS and hosted online.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📚 Education</h3>
+                <p>
+                    Educational projects and learning
+                    activities related to teaching and technology.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚽ Football</h3>
+                <p>
+                    Sharing my interest in football,
+                    gaming and eFootball.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            Want to get in touch?
+        </p>
+
+        <p>
+            📧 Email:
+            <a href="mailto:your-emailkimtaicaleb30@gmail.com">
+                your-email kimtaicaleb30@gmail.com
+            </a>
+        </p>
+
+        <p>
+            🌍 Kenya
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Caleb Kimtai. All rights reserved.
+        </p>
+
+        <p>
+            Built with HTML & CSS.
+        </p>
+
+    </footer>
+
+</body>
+</html>

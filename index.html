@@ -605,24 +605,31 @@
                 gap: 13px;
             }
 
-            .profile {
-                padding: 30px 15px 20px;
+        /* PROFILE PHOTO */
+.profile-picture {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+}
 
-                display: grid;
+.profile-picture-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+}
 
-                grid-template-columns: 95px 1fr;
-
-                gap: 18px;
-            }
-
-            .profile-picture {
-                width: 95px;
-                height: 95px;
-            }
-
-            .profile-picture-inner {
-                font-size: 34px;
-            }
+.profile-picture-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
             .profile-info {
                 min-width: 0;

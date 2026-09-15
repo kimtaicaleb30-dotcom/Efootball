@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="q7Ik4-ZFTCXtYjgFR7bX5Dnyx_j5AM4r4hFDKqnx62k" />
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Caleb Kimtai | Digital Creator</title>
+
+    <meta name="description"
+          content="Official website of Caleb Kimtai — digital creator, tech explorer and education enthusiast. Explore my projects, interests and digital journey.">
+
+    <meta name="keywords"
+          content="Caleb Kimtai, Caleb Kimtai Kenya, digital creator, technology, education, football, projects">
+
+    <meta name="author" content="Caleb Kimtai">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Modern fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #fafafa;
+            color: #111111;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            height: 60px;
+
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .topbar-inner {
+            max-width: 950px;
+            height: 100%;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 18px;
+        }
+
+        .brand {
+            font-family: "Poppins", sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .brand span {
+            background: linear-gradient(
+                45deg,
+                #feda75,
+                #fa7e1e,
+                #d62976,
+                #962fbf,
+                #4f5bd5
+            );
+
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .top-icons {
+            display: flex;
+            gap: 18px;
+            font-size: 22px;
+        }
+
+
+        /* =========================
+           MAIN PROFILE
+        ========================= */
+
+        main {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .profile {
+            padding: 45px 20px 30px;
+
+            display: flex;
+            gap: 45px;
+            align-items: center;
+        }
+
+
+        /* Profile picture */
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+
+            padding: 5px;
+
+            background: linear-gradient(
+                45deg,
+                #feda75,
+                #fa7e1e,
+                #d62976,
+                #962fbf,
+                #4f5bd5
+            );
+
+            flex-shrink: 0;
+        }
+
+        .profile-picture-inner {
+            width: 100%;
+            height: 100%;
+
+            border-radius: 50%;
+
+            background: #eeeeee;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 50px;
+            font-weight: 700;
+
+            color: #777;
+
+            border: 4px solid white;
+        }
+
+
+        /* Profile information */
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .username-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+
+            margin-bottom: 18px;
+        }
+
+        .username {
+            font-family: "Poppins", sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .verified {
+            font-size: 16px;
+            color: #3897f0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button {
+            padding: 9px 18px;
+
+            border-radius: 8px;
+
+            font-weight: 600;
+            font-size: 14px;
+
+            background: #efefef;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #dddddd;
+        }
+
+        .button.primary {
+            background: #0095f6;
+            color: white;
+        }
+
+        .button.primary:hover {
+            background: #007dcc;
+        }
+
+
+        /* Stats */
+
+        .stats {
+            display: flex;
+            gap: 35px;
+
+            margin-bottom: 18px;
+        }
+
+        .stat {
+            font-size: 15px;
+        }
+
+        .stat strong {
+            font-weight: 700;
+        }
+
+
+        /* Bio */
+
+        .bio {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .bio-name {
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .bio-highlight {
+            color: #555;
+        }
+
+
+        /* =========================
+           HIGHLIGHTS
+        ========================= */
+
+        .highlights {
+            display: flex;
+            gap: 25px;
+
+            padding: 10px 20px 35px;
+
+            overflow-x: auto;
+        }
+
+        .highlight {
+            min-width: 75px;
+
+            text-align: center;
+
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .highlight-circle {
+            width: 70px;
+            height: 70px;
+
+            margin: auto auto 8px;
+
+            border-radius: 50%;
+
+            border: 1px solid #ddd;
+
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 26px;
+
+            box-shadow: 0 2px 7px rgba(0,0,0,0.05);
+        }
+
+
+        /* =========================
+           INTRO CARD
+        ========================= */
+
+        .intro {
+            margin: 0 20px 35px;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            background: linear-gradient(
+                135deg,
+                #fff,
+                #f6f6ff
+            );
+
+            border: 1px solid #e5e5e5;
+        }
+
+        .intro h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           SECTION NAVIGATION
+        ========================= */
+
+        .tabs {
+            display: flex;
+
+            border-top: 1px solid #ddd;
+
+            justify-content: center;
+
+            gap: 55px;
+        }
+
+        .tab {
+            padding: 17px 5px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            color: #777;
+
+            position: relative;
+        }
+
+        .tab.active {
+            color: #111;
+        }
+
+        .tab.active::before {
+            content: "";
+
+            position: absolute;
+
+            top: -1px;
+            left: 0;
+            right: 0;
+
+            height: 2px;
+
+            background: #111;
+        }
+
+
+        /* =========================
+           PROJECT GRID
+        ========================= */
+
+        .grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 4px;
+
+            padding-bottom: 40px;
+        }
+
+        .post {
+            aspect-ratio: 1 / 1;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #eeeeee;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            cursor: pointer;
+        }
+
+        .post:nth-child(1) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #4f5bd5,
+                    #d62976
+                );
+        }
+
+        .post:nth-child(2) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fa7e1e,
+                    #feda75
+                );
+        }
+
+        .post:nth-child(3) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #833ab4,
+                    #4f5bd5
+                );
+        }
+
+        .post:nth-child(4) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0095f6,
+                    #00c6ff
+                );
+        }
+
+        .post:nth-child(5) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #11998e,
+                    #38ef7d
+                );
+        }
+
+        .post:nth-child(6) {
+            background:
+                linear-gradient(
+                    135deg,
+                    #232526,
+                    #414345
+                );
+        }
+
+        .post-content {
+            color: white;
+
+            padding: 20px;
+        }
+
+        .post-icon {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .post h3 {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+        }
+
+        .post p {
+            font-size: 11px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .post:hover {
+            opacity: 0.85;
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about {
+            padding: 60px 20px;
+
+            text-align: center;
+        }
+
+        .about h2 {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #666;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            margin: 20px;
+
+            padding: 40px 25px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            background: #111;
+
+            color: white;
+        }
+
+        .contact h2 {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 27px;
+
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            color: #bbb;
+
+            font-size: 14px;
+
+            margin-bottom: 22px;
+        }
+
+        .email-button {
+            display: inline-block;
+
+            padding: 11px 22px;
+
+            border-radius: 8px;
+
+            background: white;
+
+            color: #111;
+
+            font-weight: 700;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            color: #888;
+
+            font-size: 12px;
+
+            border-top: 1px solid #eee;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            .topbar-inner {
+                padding: 0 15px;
+            }
+
+            .top-icons {
+                gap: 13px;
+            }
+
+        /* PROFILE PHOTO */
+.profile-picture {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+
+.profile-picture-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.profile-picture-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+            .profile-info {
+                min-width: 0;
+            }
+
+            .username-row {
+                display: block;
+
+                margin-bottom: 10px;
+            }
+
+            .username {
+                font-size: 21px;
+
+                margin-bottom: 8px;
+            }
+
+            .buttons {
+                width: 100%;
+            }
+
+            .button {
+                padding: 8px 12px;
+
+                font-size: 12px;
+            }
+
+            .stats {
+                grid-column: 1 / -1;
+
+                justify-content: space-around;
+
+                gap: 10px;
+
+                border-top: 1px solid #eee;
+
+                padding-top: 15px;
+
+                margin-bottom: 0;
+            }
+
+            .bio {
+                grid-column: 1 / -1;
+
+                margin-top: 5px;
+            }
+
+            .highlights {
+                gap: 18px;
+
+                padding-left: 15px;
+            }
+
+            .highlight-circle {
+                width: 62px;
+                height: 62px;
+            }
+
+            .intro {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            .tabs {
+                gap: 35px;
+            }
+
+            .grid {
+                gap: 3px;
+            }
+
+            .post-content {
+                padding: 10px;
+            }
+
+            .post-icon {
+                font-size: 28px;
+            }
+
+            .post h3 {
+                font-size: 12px;
+            }
+
+            .post p {
+                display: none;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+
+    <div class="topbar-inner">
+
+        <div class="brand">
+            Caleb<span>.</span>
+        </div>
+
+        <div class="top-icons">
+            <span>♡</span>
+            <span>✉</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<main>
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
+<section class="profile">
+
+
+    <div class="profile-picture">
+
+        <div class="profile-picture-inner">
+            <img src="caleb-profile-18.jpg" alt="caleb kimtai">
+        </div>
+
+    </div>
+
+
+    <div class="profile-info">
+
+
+        <div class="username-row">
+
+            <div class="username">
+                Caleb Kimtai
+            </div>
+
+            <div class="verified">
+                ●
+            </div>
+
+            <div class="buttons">
+
+                <a
+                    href="#contact"
+                    class="button primary">
+                    Contact
+                </a>
+
+                <a
+                    href="#projects"
+                    class="button">
+                    Projects
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>6</strong> Projects
+            </div>
+
+            <div class="stat">
+                <strong>8</strong> Skills
+            </div>
+
+            <div class="stat">
+                <strong>4</strong> Interests
+            </div>
+
+        </div>
+
+
+        <div class="bio">
+
+            <div class="bio-name">
+                Digital Creator
+            </div>
+
+            <div>
+                Tech Explorer • Education Enthusiast
+            </div>
+
+            <div class="bio-highlight">
+                Technology • Creativity • Football
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HIGHLIGHTS
+========================= -->
+
+<div class="highlights">
+
+
+    <a href="#about" class="highlight">
+
+        <div class="highlight-circle">
+            👋
+        </div>
+
+        About
+
+    </a>
+
+
+    <a href="#education" class="highlight">
+
+        <div class="highlight-circle">
+            🎓
+        </div>
+
+        Education
+
+    </a>
+
+
+    <a href="#skills" class="highlight">
+
+        <div class="highlight-circle">
+            💻
+        </div>
+
+        Tech
+
+    </a>
+
+
+    <a href="#football" class="highlight">
+
+        <div class="highlight-circle">
+            ⚽
+        </div>
+
+        Football
+
+    </a>
+
+
+    <a href="#projects" class="highlight">
+
+        <div class="highlight-circle">
+            🚀
+        </div>
+
+        Projects
+
+    </a>
+
+
+</div>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<div class="intro" id="about">
+
+    <h2>
+        Welcome to my space 👋
+    </h2>
+
+    <p>
+        I'm Caleb Kimtai — a digital creator and
+        technology enthusiast exploring ideas,
+        creativity, education and digital projects.
+        This website is my personal space on the web
+        where I share the things I'm learning,
+        creating and interested in.
+    </p>
+
+</div>
+
+
+
+<!-- =========================
+     TABS
+========================= -->
+
+<div class="tabs">
+
+    <a href="#projects" class="tab active">
+        ▦ PROJECTS
+    </a>
+
+    <a href="#skills" class="tab">
+        ♢ SKILLS
+    </a>
+
+    <a href="#about" class="tab">
+        ◎ ABOUT
+    </a>
+
+</div>
+
+
+
+<!-- =========================
+     PROJECT GRID
+========================= -->
+
+<div class="grid" id="projects">
+
+
+    <div class="post">
+
+        <div class="post-content">
+
+            <div class="post-icon">
+                🌐
+            </div>
+
+            <h3>
+                Personal Website
+            </h3>
+
+            <p>
+                My digital home on the web.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="post">
+
+        <div class="post-content">
+
+            <div class="post-icon">
+                💻
+            </div>
+
+            <h3>
+                Technology
+            </h3>
+
+            <p>
+                Exploring digital tools.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="post">
+
+        <div class="post-content">
+
+            <div class="post-icon">
+                🎨
+            </div>
+
+            <h3>
+                Creativity
+            </h3>
+
+            <p>
+                Ideas and creative projects.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="post">
+
+        <div class="post-content">
+
+            <div class="post-icon">
+                📚
+            </div>
+
+            <h3>
+                Education
+            </h3>
+
+            <p>
+                Learning and knowledge.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="post" id="football">
+
+        <div class="post-content">
+
+            <div class="post-icon">
+                ⚽
+            </div>
+
+            <h3>
+                Football
+            </h3>
+
+            <p>
+                Football and gaming.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="post">
+
+        <div class="post-content">
+
+            <div class="post-icon">
+                🚀
+            </div>
+
+            <h3>
+                Future Projects
+            </h3>
+
+            <p>
+                More projects coming soon.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section class="about" id="skills">
+
+    <h2>
+        Skills
+    </h2>
+
+    <p>
+        Digital technology, HTML, CSS, research,
+        communication, creativity, problem solving,
+        education and continuous learning.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="about" id="education">
+
+    <h2>
+        Education
+    </h2>
+
+    <p>
+        I am passionate about learning, education
+        and developing knowledge that can be applied
+        in the digital world.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <h2>
+        Let's Connect
+    </h2>
+
+    <p>
+        Have an idea, question or project?
+        I'd be happy to connect.
+    </p>
+
+    <!-- CHANGE YOUR EMAIL BELOW -->
+
+    <a
+        class="email-button"
+        href="mailto:kimtaicaleb30@gmail.com">
+
+        ✉ Send Email
+
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Caleb Kimtai • Built with HTML & CSS
+
+</footer>
+
+
+</body>
+    </html>

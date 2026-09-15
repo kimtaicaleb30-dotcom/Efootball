@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="q7Ik4-ZFTCXtYjgFR7bX5Dnyx_j5AM4r4hFDKqnx62k">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eFOOTBALL HUB | Verified Community</title>
+<meta name="description" content="eFOOTBALL HUB — play, compete, share and connect with eFootball players. Find friendlies, discuss updates, share skills and join the community.">
+<meta name="keywords" content="eFootball, eFootball community, friendlies, football gaming, eFootball Kenya">
+<meta name="author" content="eFOOTBALL HUB">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:#f0f2f5;color:#172033}
+button,input,textarea{font:inherit}
+button{cursor:pointer;border:0}
+a{text-decoration:none;color:inherit}
+
+:root{
+ --blue:#1877f2;--dark:#0b1220;--green:#20c76b;--card:#fff;
+ --muted:#667085;--line:#e4e7ec;--gold:#f5b400
+}
+
+/* TOP BAR */
+.topbar{height:64px;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1000}
+.topbar-inner{max-width:1100px;height:100%;margin:auto;padding:0 16px;display:flex;align-items:center;gap:18px}
+.logo{font-family:Poppins;font-size:21px;font-weight:800;white-space:nowrap}
+.logo span{color:var(--blue)}
+.search{height:40px;background:#f0f2f5;border-radius:22px;display:flex;align-items:center;padding:0 14px;gap:8px;flex:1;max-width:360px}
+.search input{border:0;outline:0;background:transparent;width:100%;font-size:14px}
+.top-actions{margin-left:auto;display:flex;gap:8px}
+.icon-btn{width:42px;height:42px;border-radius:50%;background:#eef2f7;font-size:19px;position:relative}
+.badge-count{position:absolute;right:-2px;top:-2px;background:#e41e3f;color:white;border-radius:20px;font-size:10px;padding:2px 5px;font-weight:700}
+
+/* COVER */
+.cover{max-width:1100px;margin:auto;background:linear-gradient(125deg,#071526 0%,#0b2c58 40%,#1877f2 72%,#10243c);height:245px;position:relative;overflow:hidden}
+.cover:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 20% 30%,rgba(255,255,255,.12),transparent 25%),
+radial-gradient(circle at 80% 65%,rgba(255,255,255,.13),transparent 28%),
+linear-gradient(135deg,transparent 35%,rgba(255,255,255,.06) 35%,transparent 36%,transparent 63%,rgba(255,255,255,.05) 63%,transparent 64%)}
+.cover-content{position:absolute;right:28px;top:32px;color:white;text-align:right}
+.cover-content h1{font:800 38px Poppins;letter-spacing:-1px}
+.cover-content p{font-size:13px;opacity:.85;margin-top:4px}
+.ball{font-size:70px;opacity:.18;position:absolute;left:25px;bottom:10px}
+
+/* PAGE PROFILE */
+.page-head{max-width:1100px;margin:auto;background:white;padding:0 24px 18px;position:relative}
+.profile-row{display:flex;align-items:flex-end;gap:18px;margin-top:-54px;position:relative}
+.dp{width:112px;height:112px;border-radius:50%;background:#e9edf3;border:5px solid white;box-shadow:0 2px 10px #0002;display:grid;place-items:center;font-size:42px;color:#8a94a6}
+.page-info{padding-bottom:4px;flex:1}
+.name-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.page-name{font:800 25px Poppins}
+.verified{width:21px;height:21px;border-radius:50%;background:#1877f2;color:white;display:inline-grid;place-items:center;font-size:13px;font-weight:800;box-shadow:0 0 0 2px white}
+.subtitle{font-size:13px;color:var(--muted);margin-top:3px}
+.page-actions{display:flex;gap:8px;padding-bottom:5px}
+.btn{padding:10px 16px;border-radius:8px;font-weight:700;font-size:13px;background:#e9edf3}
+.btn.blue{background:var(--blue);color:white}
+.btn.green{background:var(--green);color:white}
+
+/* NAV */
+.nav{max-width:1100px;margin:auto;background:white;border-top:1px solid var(--line);display:flex;gap:4px;padding:0 18px;overflow-x:auto;position:sticky;top:64px;z-index:900}
+.nav a{padding:15px 17px;color:#667085;font-weight:700;font-size:13px;white-space:nowrap;border-bottom:3px solid transparent}
+.nav a.active,.nav a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* LAYOUT */
+.layout{max-width:1100px;margin:16px auto;display:grid;grid-template-columns:290px minmax(0,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 1px 2px #00000008;margin-bottom:14px}
+.card-title{font:700 16px Poppins;padding:16px 16px 8px}
+.card-body{padding:0 16px 16px}
+.about-text{font-size:13px;line-height:1.65;color:#667085}
+.quick{display:grid;gap:8px}
+.quick button{background:#f5f7fa;text-align:left;padding:11px;border-radius:8px;font-weight:700;font-size:13px}
+.quick button:hover{background:#eaf2ff;color:var(--blue)}
+.online{display:flex;align-items:center;gap:9px;padding:8px 0;font-size:13px}
+.dot{width:9px;height:9px;background:var(--green);border-radius:50%}
+
+/* CREATE POST */
+.create{padding:14px}
+.create-top{display:flex;gap:10px;align-items:center}
+.mini-dp{width:42px;height:42px;border-radius:50%;background:#e9edf3;display:grid;place-items:center;color:#8993a3}
+.post-input{flex:1;background:#f0f2f5;border:0;border-radius:22px;padding:11px 16px;text-align:left;color:#667085}
+.post-tools{display:flex;border-top:1px solid var(--line);margin-top:12px;padding-top:10px;gap:5px}
+.post-tools button{flex:1;background:white;border-radius:7px;padding:9px;font-size:12px;font-weight:700;color:#667085}
+.post-tools button:hover{background:#f0f2f5}
+
+/* POST */
+.post{padding:15px}
+.post-head{display:flex;gap:10px;align-items:center}
+.avatar{width:43px;height:43px;border-radius:50%;background:linear-gradient(135deg,#0b1220,#1877f2);display:grid;place-items:center;color:white;font-weight:800}
+.post-author{font-weight:800;font-size:14px}
+.post-time{font-size:11px;color:#8a94a6;margin-top:2px}
+.post-menu{margin-left:auto;background:white;font-size:20px;color:#667085}
+.post-text{font-size:14px;line-height:1.55;margin:13px 0}
+.post-visual{min-height:230px;border-radius:10px;display:grid;place-items:center;color:white;text-align:center;padding:25px;background:
+radial-gradient(circle at 70% 30%,#1d8fff55,transparent 25%),
+linear-gradient(135deg,#071526,#174b88 55%,#1877f2)}
+.post-visual .big{font:800 31px Poppins}
+.post-visual .small{margin-top:8px;opacity:.8;font-size:12px}
+.stats-row{display:flex;justify-content:space-between;color:#667085;font-size:12px;padding:11px 2px;border-bottom:1px solid var(--line)}
+.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding-top:5px}
+.actions button{background:white;padding:9px;border-radius:7px;font-weight:700;color:#667085;font-size:13px}
+.actions button:hover{background:#f0f2f5}
+.comment-box{display:flex;gap:7px;margin-top:9px}
+.comment-box input{flex:1;border:0;background:#f0f2f5;border-radius:20px;padding:9px 13px;outline:0}
+.comment-box button{background:var(--blue);color:white;border-radius:20px;padding:0 13px}
+.comments{margin-top:8px}
+.comment{font-size:12px;background:#f0f2f5;border-radius:10px;padding:7px 10px;margin-top:5px}
+
+/* RIGHT */
+.side-title{font-size:13px;font-weight:800;color:#667085;margin-bottom:8px}
+.challenge{padding:11px 0;border-bottom:1px solid var(--line)}
+.challenge:last-child{border-bottom:0}
+.challenge strong{font-size:13px}
+.challenge small{display:block;color:#8a94a6;margin:3px 0 8px}
+.challenge button{background:#eaf2ff;color:var(--blue);padding:7px 10px;border-radius:7px;font-weight:800;font-size:11px}
+.rank{display:flex;align-items:center;gap:9px;padding:8px 0}
+.rank-num{font-weight:800;width:20px}.rank-name{flex:1;font-size:12px}.rating{font-weight:800;font-size:12px}
+
+/* MODAL + CHAT */
+.modal{display:none;position:fixed;inset:0;background:#07152699;z-index:2000;align-items:center;justify-content:center;padding:15px}
+.modal.show{display:flex}
+.modal-card{width:min(500px,100%);background:white;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px #0005}
+.modal-head{padding:16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.modal-head h2{font:700 18px Poppins}
+.close{background:#f0f2f5;width:34px;height:34px;border-radius:50%}
+.modal-body{padding:16px}
+.form{display:grid;gap:10px}
+.form input,.form textarea,.form select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;outline:0}
+.form textarea{min-height:90px;resize:vertical}
+.chat-layout{display:grid;grid-template-columns:150px 1fr;height:430px}
+.chat-list{border-right:1px solid var(--line);overflow:auto}
+.chat-user{padding:12px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700}
+.chat-user.active{background:#eaf2ff;color:var(--blue)}
+.chat-window{display:flex;flex-direction:column}
+.chat-head{padding:12px;border-bottom:1px solid var(--line);font-weight:800}
+.messages{flex:1;padding:12px;overflow:auto;background:#f6f7f9}
+.msg{max-width:75%;padding:8px 10px;border-radius:11px;margin:5px 0;font-size:12px}
+.msg.them{background:white}.msg.me{background:#1877f2;color:white;margin-left:auto}
+.chat-send{display:flex;padding:10px;gap:6px;border-top:1px solid var(--line)}
+.chat-send input{flex:1;border:0;background:#f0f2f5;border-radius:20px;padding:9px 12px;outline:0}
+.chat-send button{background:var(--blue);color:white;border-radius:20px;padding:0 14px}
+
+/* FOOTER */
+footer{text-align:center;padding:30px;color:#8a94a6;font-size:11px}
+
+/* MOBILE */
+@media(max-width:800px){
+ .layout{grid-template-columns:1fr;margin:10px 8px}
+ .sidebar{display:none}
+ .cover{height:190px}
+ .cover-content{right:18px;top:25px}.cover-content h1{font-size:29px}.ball{font-size:55px}
+ .page-head{padding:0 12px 12px}
+ .profile-row{margin-top:-45px;align-items:flex-end;flex-wrap:wrap}
+ .dp{width:90px;height:90px;font-size:32px}
+ .page-info{min-width:calc(100% - 110px)}
+ .page-name{font-size:20px}
+ .page-actions{width:100%;padding:0}.page-actions .btn{flex:1}
+ .nav{top:64px;padding:0 5px}
+ .nav a{padding:13px 11px;font-size:11px}
+ .topbar-inner{gap:8px}.logo{font-size:17px}.search{max-width:none}.top-actions{gap:3px}.top-actions .icon-btn:nth-child(1){display:none}
+ .chat-layout{grid-template-columns:110px 1fr}
+}
+</style>
+</head>
+
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">⚽ eFOOTBALL <span>HUB</span></div>
+    <div class="search">🔎 <input id="searchInput" placeholder="Search players, posts..." oninput="searchPosts()"></div>
+    <div class="top-actions">
+      <button class="icon-btn" onclick="openChat()">💬<span class="badge-count">3</span></button>
+      <button class="icon-btn" onclick="showToast('Notifications coming alive as the community grows 🔔')">🔔</button>
+    </div>
+  </div>
+</header>
+
+<div class="cover">
+  <div class="ball">⚽</div>
+  <div class="cover-content">
+    <h1>eFOOTBALL HUB</h1>
+    <p>PLAY • COMPETE • SHARE • CONNECT</p>
+  </div>
+</div>
+
+<section class="page-head">
+  <div class="profile-row">
+    <div class="dp">👤</div>
+    <div class="page-info">
+      <div class="name-line">
+        <div class="page-name">eFOOTBALL HUB</div>
+        <span class="verified" title="Verified community">✓</span>
+      </div>
+      <div class="subtitle">⚽ The home of eFootball players • Community Page</div>
+    </div>
+    <div class="page-actions">
+      <button class="btn blue" onclick="toggleFollow(this)">+ Follow</button>
+      <button class="btn green" onclick="openFriendly()">⚔ Find Friendly</button>
+      <button class="btn" onclick="openChat()">💬 Chat</button>
+    </div>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="#home" class="active">🏠 Home</a>
+  <a href="#friendlies" onclick="openFriendly()">⚔ Friendlies</a>
+  <a href="#chat" onclick="openChat()">💬 Chat</a>
+  <a href="#tournaments" onclick="showToast('Tournament centre is coming next 🏆')">🏆 Tournaments</a>
+  <a href="#rankings" onclick="showToast('Player rankings are coming next 🥇')">🥇 Rankings</a>
+  <a href="#about">ℹ About</a>
+</nav>
+
+<main class="layout" id="home">
+  <aside class="sidebar">
+    <div class="card">
+      <div class="card-title">About the community</div>
+      <div class="card-body">
+        <p class="about-text">A place for eFootball players to share skills, updates, squad ideas, match results and feedback — then find opponents and play.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Quick actions</div>
+      <div class="card-body quick">
+        <button onclick="openFriendly()">⚔️ Request a Friendly</button>
+        <button onclick="openChat()">💬 Open Community Chat</button>
+        <button onclick="openPost()">✍️ Create a Post</button>
+        <button onclick="showToast('Tournament centre coming soon 🏆')">🏆 Join Tournament</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Players online</div>
+      <div class="card-body">
+        <div class="online"><span class="dot"></span> KingLeo <small>• ready</small></div>
+        <div class="online"><span class="dot"></span> eFootMaster <small>• in lobby</small></div>
+        <div class="online"><span class="dot"></span> BallControl <small>• ready</small></div>
+      </div>
+    </div>
+  </aside>
+
+  <section>
+    <div class="card create">
+      <div class="create-top">
+        <div class="mini-dp">👤</div>
+        <button class="post-input" onclick="openPost()">What's happening in eFootball?</button>
+      </div>
+      <div class="post-tools">
+        <button onclick="openPost()">🎮 Match</button>
+        <button onclick="openPost()">📸 Photo</button>
+        <button onclick="openFriendly()">⚔️ Friendly</button>
+        <button onclick="showToast('Poll creator coming soon 📊')">📊 Poll</button>
+      </div>
+    </div>
+
+    <article class="card post" data-search="efootball update skills community gameplay">
+      <div class="post-head">
+        <div class="avatar">⚽</div>
+        <div><div class="post-author">eFOOTBALL HUB <span class="verified">✓</span></div><div class="post-time">Just now • 🌍 Community</div></div>
+        <button class="post-menu">•••</button>
+      </div>
+      <p class="post-text"><strong>🔥 Welcome to eFOOTBALL HUB!</strong><br>Share your best skills, squad builds, updates and match moments. Need an opponent? Post a friendly request and let the community answer.</p>
+      <div class="post-visual"><div><div class="big">⚡ MASTER THE GAME</div><div class="small">PLAY SMART • BUILD YOUR SQUAD • COMPETE</div></div></div>
+      <div class="stats-row"><span id="likes1">👍 24 likes</span><span>8 comments • 4 shares</span></div>
+      <div class="actions">
+        <button onclick="likePost('likes1',this)">👍 Like</button>
+        <button onclick="focusComment(this)">💬 Comment</button>
+        <button onclick="sharePost()">↗ Share</button>
+      </div>
+      <div class="comment-box"><input placeholder="Write a comment..." onkeydown="if(event.key==='Enter')addComment(this)"><button onclick="addComment(this.previousElementSibling)">Post</button></div>
+      <div class="comments"></div>
+    </article>
+
+    <article class="card post" data-search="friendly kenya opponent match">
+      <div class="post-head">
+        <div class="avatar">KL</div>
+        <div><div class="post-author">KingLeo <span class="verified">✓</span></div><div class="post-time">12 min ago • 🟢 Online</div></div>
+        <button class="post-menu">•••</button>
+      </div>
+      <p class="post-text">⚔️ <strong>Looking for a friendly!</strong><br>Anyone ready for a quick match? Let's test squads and have fun. Tap challenge and let's play.</p>
+      <div class="stats-row"><span>👍 7 likes</span><span>3 comments</span></div>
+      <div class="actions">
+        <button onclick="likePost(null,this)">👍 Like</button>
+        <button onclick="focusComment(this)">💬 Comment</button>
+        <button onclick="openFriendly('KingLeo')">⚔ Challenge</button>
+      </div>
+      <div class="comment-box"><input placeholder="Reply..." onkeydown="if(event.key==='Enter')addComment(this)"><button onclick="addComment(this.previousElementSibling)">Post</button></div>
+      <div class="comments"></div>
+    </article>
+
+    <article class="card post" data-search="skills tutorial dribbling efootball">
+      <div class="post-head">
+        <div class="avatar">EC</div>
+        <div><div class="post-author">eFootCoach</div><div class="post-time">34 min ago • 🎮 Skills</div></div>
+        <button class="post-menu">•••</button>
+      </div>
+      <p class="post-text">🎮 <strong>Skill Tip:</strong> Share your favourite eFootball move in the comments. The community can rate it and help new players master it.</p>
+      <div class="post-visual" style="background:linear-gradient(135deg,#111827,#334155,#0f766e)"><div><div class="big">🎮 SKILLS ZONE</div><div class="small">SHOW US WHAT YOU'VE GOT</div></div></div>
+      <div class="stats-row"><span>👍 16 likes</span><span>11 comments</span></div>
+      <div class="actions"><button onclick="likePost(null,this)">👍 Like</button><button onclick="focusComment(this)">💬 Comment</button><button onclick="sharePost()">↗ Share</button></div>
+      <div class="comment-box"><input placeholder="Drop your skill..." onkeydown="if(event.key==='Enter')addComment(this)"><button onclick="addComment(this.previousElementSibling)">Post</button></div>
+      <div class="comments"></div>
+    </article>
+  </section>
+
+  <aside class="sidebar">
+    <div class="card" id="friendlies">
+      <div class="card-title">⚔ Players looking for friendlies</div>
+      <div class="card-body">
+        <div class="challenge"><strong>🟢 KingLeo</strong><small>Quick Match • Kenya • Now</small><button onclick="openFriendly('KingLeo')">Challenge</button></div>
+        <div class="challenge"><strong>🟢 eFootMaster</strong><small>Any mode • East Africa</small><button onclick="openFriendly('eFootMaster')">Challenge</button></div>
+        <div class="challenge"><strong>🟢 BallControl</strong><small>Division Match • Now</small><button onclick="openFriendly('BallControl')">Challenge</button></div>
+      </div>
+    </div>
+    <div class="card" id="rankings">
+      <div class="card-title">🥇 Community rankings</div>
+      <div class="card-body">
+        <div class="rank"><span class="rank-num">1</span><span class="rank-name">KingLeo</span><span class="rating">98</span></div>
+        <div class="rank"><span class="rank-num">2</span><span class="rank-name">BallControl</span><span class="rating">96</span></div>
+        <div class="rank"><span class="rank-num">3</span><span class="rank-name">eFootMaster</span><span class="rating">94</span></div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<footer id="about">© 2026 eFOOTBALL HUB • Play • Compete • Share • Connect</footer>
+
+<!-- POST MODAL -->
+<div class="modal" id="postModal">
+  <div class="modal-card">
+    <div class="modal-head"><h2>Create a community post</h2><button class="close" onclick="closeModal('postModal')">×</button></div>
+    <div class="modal-body">
+      <div class="form">
+        <input id="postTitle" placeholder="Post title (optional)">
+        <textarea id="postText" placeholder="Share an eFootball update, skill, squad idea, match result..."></textarea>
+        <select id="postType"><option>Community update</option><option>Skill / Tutorial</option><option>Match result</option><option>Squad discussion</option></select>
+        <button class="btn blue" onclick="publishPost()">🚀 Publish Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FRIENDLY MODAL -->
+<div class="modal" id="friendlyModal">
+  <div class="modal-card">
+    <div class="modal-head"><h2>⚔️ Find a Friendly</h2><button class="close" onclick="closeModal('friendlyModal')">×</button></div>
+    <div class="modal-body">
+      <div class="form">
+        <input id="friendlyPlayer" placeholder="Opponent username">
+        <select><option>Quick Match</option><option>Division Match</option><option>Friendly Lobby</option><option>Any mode</option></select>
+        <select><option>🟢 Available now</option><option>Later today</option><option>Schedule a time</option></select>
+        <input placeholder="Your eFootball ID (optional)">
+        <button class="btn green" onclick="sendChallenge()">⚔️ Send Challenge</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHAT MODAL -->
+<div class="modal" id="chatModal">
+  <div class="modal-card">
+    <div class="modal-head"><h2>💬 Community Chat</h2><button class="close" onclick="closeModal('chatModal')">×</button></div>
+    <div class="chat-layout">
+      <div class="chat-list">
+        <div class="chat-user active">🌍 Community</div>
+        <div class="chat-user">KingLeo 🟢</div>
+        <div class="chat-user">eFootMaster 🟢</div>
+        <div class="chat-user">BallControl</div>
+      </div>
+      <div class="chat-window">
+        <div class="chat-head">🌍 eFOOTBALL HUB Community</div>
+        <div class="messages" id="messages">
+          <div class="msg them">Welcome to the community! 👋</div>
+          <div class="msg them">Anyone up for friendlies?</div>
+          <div class="msg me">I'm ready ⚔️</div>
+        </div>
+        <div class="chat-send"><input id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendMessage()"><button onclick="sendMessage()">Send</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" style="position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:#111827;color:white;padding:11px 16px;border-radius:10px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:3000"></div>
+
+<script>
+function openModal(id){document.getElementById(id).classList.add('show')}
+function closeModal(id){document.getElementById(id).classList.remove('show')}
+function openPost(){openModal('postModal')}
+function openChat(){openModal('chatModal')}
+function openFriendly(player=''){document.getElementById('friendlyPlayer').value=player;openModal('friendlyModal')}
+function showToast(text){
+ const t=document.getElementById('toast');t.textContent=text;t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
+ clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)'},2500)
+}
+function toggleFollow(btn){btn.textContent=btn.textContent.includes('Follow')?'✓ Following':' + Follow';showToast(btn.textContent.includes('Following')?'You are following eFOOTBALL HUB':'Follow removed')}
+function likePost(id,btn){btn.classList.toggle('liked');btn.textContent=btn.classList.contains('liked')?'❤️ Liked':'👍 Like';if(id){let e=document.getElementById(id);let n=parseInt(e.textContent.match(/\d+/)[0]);e.textContent=(btn.classList.contains('liked')?'❤️ ':'👍 ')+(n+(btn.classList.contains('liked')?1:-1))+' likes'}}
+function focusComment(btn){const box=btn.closest('.post').querySelector('.comment-box input');box.focus()}
+function addComment(input){
+ const text=input.value.trim();if(!text)return;
+ const c=input.closest('.post').querySelector('.comments');const div=document.createElement('div');div.className='comment';div.textContent='You: '+text;c.appendChild(div);input.value='';showToast('Comment posted 💬')
+}
+function sharePost(){navigator.clipboard?.writeText(location.href);showToast('Post link copied — ready to share ↗')}
+function publishPost(){
+ const text=document.getElementById('postText').value.trim();if(!text){showToast('Write something first ✍️');return}
+ const article=document.createElement('article');article.className='card post';article.dataset.search=text.toLowerCase();
+ article.innerHTML='<div class="post-head"><div class="avatar">👤</div><div><div class="post-author">You</div><div class="post-time">Just now • 🌍 Community</div></div></div><p class="post-text">'+escapeHtml(text)+'</p><div class="stats-row"><span>👍 0 likes</span><span>0 comments</span></div><div class="actions"><button onclick="likePost(null,this)">👍 Like</button><button onclick="focusComment(this)">💬 Comment</button><button onclick="sharePost()">↗ Share</button></div><div class="comment-box"><input placeholder="Write a comment..." onkeydown="if(event.key===\'Enter\')addComment(this)"><button onclick="addComment(this.previousElementSibling)">Post</button></div><div class="comments"></div>';
+ document.querySelector('section').appendChild(article);closeModal('postModal');document.getElementById('postText').value='';showToast('Your post is live on the page 🚀');window.scrollTo({top:article.offsetTop-90,behavior:'smooth'})
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function sendChallenge(){const p=document.getElementById('friendlyPlayer').value.trim()||'the player';closeModal('friendlyModal');showToast('Friendly challenge sent to '+p+' ⚔️')}
+function sendMessage(){const input=document.getElementById('chatInput'),text=input.value.trim();if(!text)return;const m=document.getElementById('messages'),d=document.createElement('div');d.className='msg me';d.textContent=text;m.appendChild(d);input.value='';m.scrollTop=m.scrollHeight;setTimeout(()=>{const r=document.createElement('div');r.className='msg them';r.textContent='👍 Message received!';m.appendChild(r);m.scrollTop=m.scrollHeight},700)}
+function searchPosts(){
+ const q=document.getElementById('searchInput').value.toLowerCase();document.querySelectorAll('.post').forEach(p=>p.style.display=(!q||p.dataset.search?.includes(q))?'block':'none')
+}
+window.addEventListener('click',e=>{if(e.target.classList.contains('modal'))e.target.classList.remove('show')})
+</script>
+</body>
+</html>
